@@ -1,0 +1,66 @@
+{
+    "projects": [
+        {
+            "id": "1",
+            "Title": "Bjda",
+            "Description": "BJDA – A Specialized Platform for Booking Wedding Venues and Sending Invitations",
+            "Img": "/project-img/bjda.png",
+            "Link": "https://www.bjda.com/",
+            "TechStack": ["laravel", "html", "css", "javascript", "tailwind", "jquery"],
+            "Features": [
+                "Online reservation for wedding halls and event venues",
+                "Search and filter by city, date, and hall type",
+                "Custom invitation design and QR code generation",
+                "Mobile-friendly interface for easy access on all devices",
+                "Integration with WhatsApp for sending invitations",
+                "Multilingual support (Arabic-focused UI)"
+            ],
+            "Github_Allowed": "false"
+        }, 
+        {
+            "id": "2",
+            "Title": "Fall-algharbiya",
+            "Description": "A multi-service platform offering integrated solutions in IT, safety systems, e-services, real estate, general contracting, and commercial brokerage.",
+            "Img": "/project-img/fall-algharbiya.png",
+            "Link": "https://fall-algharbiya.vercel.app/",
+            "TechStack": ["html", "css", "javascript", "Angular", "tailwind"],
+            "Features": [
+              "Integrated service modules for six business sectors",
+              "AI-powered technology solutions and mobile app integration",
+              "Custom web development with modern UI/UX design",
+              "E-service automation including digital transformation and government platform integration",
+              "Real estate tools for investment, marketing, and electronic contracts",
+              "Safety systems support including calibration, maintenance, and installations",
+              "Dynamic section-based navigation using Angular Router"
+            ],
+            "Github_Allowed": "false"
+        },
+        {
+            "id": "3",
+            "Title": "Manahel",
+            "Description": "A charitable platform enabling users to contribute to various good deeds in Makkah, including water distribution, Quran donations, and food services for pilgrims.",
+            "Img": "/project-img/manahel.png",
+            "Link": "https://manahel.net/",
+            "TechStack": ["codeigniter", "html", "css", "javascript", "jquery", "bootstrap"],
+            "Features": [
+              "Online ordering of charity services like water, meals, and Quran copies",
+              "Execution tracking with photo and video documentation",
+              "Secure and simple donation process",
+              "Responsive design compatible with all devices",
+              "User-friendly dashboard for managing orders and donations",
+              "Service customization based on occasion and recipient",
+              "Support for recurring charitable contributions"
+            ],
+            "Github_Allowed": "false"
+        }  
+    ],
+    "certificates": [
+      {
+        "Img": "/images/certificate1.png"
+      },
+      {
+        "Img": "/images/certificate2.png"
+      }
+    ]
+  }
+  
