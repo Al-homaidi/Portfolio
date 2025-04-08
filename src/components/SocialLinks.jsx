@@ -75,7 +75,7 @@ const SocialLinks = () => {
   const [instagram, Twitter, github, whatsapp] = otherLinks;
 
   return (
-    <div className="w-full bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-6 py-8 backdrop-blur-xl" data-aos="fade-up" data-aos-duration="1100">
+    <div className="w-full bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-6 py-8 backdrop-blur-xl">
       <h3 className="text-xl font-semibold text-white mb-6 flex items-center gap-2" data-aos="fade-up" data-aos-duration="1200">
         <span className="inline-block w-8 h-1 bg-indigo-500 rounded-full"></span>
         Connect With Me
@@ -144,7 +144,7 @@ const SocialLinks = () => {
         </a>
 
         {/* Second Row - Instagram & Twitter */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4" data-aos="fade-right" data-aos-duration="1400">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4" data-aos="fade-up" data-aos-duration="1400">
           {[instagram, Twitter].map((link) => (
             <a
               key={link.name}
@@ -193,7 +193,7 @@ const SocialLinks = () => {
         </div>
 
         {/* Third Row - GitHub & WhatsApp */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4" data-aos="fade-left" data-aos-duration="1500">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4" data-aos="fade-up" data-aos-duration="1500">
           {[github, whatsapp].map((link) => (
             <a
               key={link.name}
