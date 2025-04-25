@@ -232,8 +232,7 @@ const AboutPage = () => {
               data-aos="fade-right"
               data-aos-duration="1500"
             >
-              A passionate Front-End Developer specialized in React.js. I'm dedicated to building interactive, high-performance user interfaces using modern web technologies. I'm a fast learner, a strong team player, and thrive under pressure.
-              I'm always eager to grow my skills and contribute to innovative digital projects that make a real impact.
+              I'm a passionate Front-End Developer specialized in building modern web and mobile applications using React.js and React Native. I focus on creating interactive, high-performance user interfaces that deliver great user experiences. I'm a quick learner, a strong team player, and thrive under pressure. Always eager to grow my skills, I enjoy contributing to innovative digital projects that make a real-world impact across both web and mobile platforms.
             </p>
 
             <div className="flex flex-col lg:flex-row items-center lg:items-start gap-4 lg:gap-4 lg:px-0 w-full">

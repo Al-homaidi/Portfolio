@@ -1,24 +1,99 @@
 {
     "projects": [
         {
-            "id": "1",
-            "Title": "Bjda",
-            "Description": "BJDA – A Specialized Platform for Booking Wedding Venues and Sending Invitations",
-            "Img": "/project-img/bjda.png",
-            "Link": "https://www.bjda.com/",
-            "TechStack": ["laravel", "html", "css", "javascript", "tailwind", "jquery"],
-            "Features": [
-                "Online reservation for wedding halls and event venues",
-                "Search and filter by city, date, and hall type",
-                "Custom invitation design and QR code generation",
-                "Mobile-friendly interface for easy access on all devices",
-                "Integration with WhatsApp for sending invitations",
-                "Multilingual support (Arabic-focused UI)"
-            ],
-            "Github_Allowed": "false"
+          "id": "1",
+          "Title": "Manahel App",
+          "Description": "A mobile app designed to simplify charitable giving in Makkah. Users can easily request and donate services like water, Qurans, and meals directly from their smartphones.",
+          "Img": "/project-img/manahelapp.png",
+          "Link": "https://linktr.ee/manahel.app",
+          "TechStack": ["Ionic Angular", "HTML", "SCSS", "TypeScript"],
+          "Features": [
+            "Easy in-app ordering of charitable services",
+            "Real-time execution tracking with media proof (images & videos)",
+            "Smooth and intuitive user experience",
+            "Fully responsive and mobile-optimized design",
+            "In-app dashboard for managing donations and requests",
+            "Option to customize services for specific occasions or recipients",
+            "Automatic recurring donation support"
+          ],
+          "Github_Allowed": "false"
+        },
+        {
+          "id": "3",
+          "Title": "Manahel Web",
+          "Description": "A charitable web platform that empowers users to contribute to various acts of kindness in Makkah, such as water distribution, Quran donations, and meal services for pilgrims and visitors.",
+          "Img": "/project-img/manahel.png",
+          "Link": "https://manahel.net/",
+          "TechStack": ["CodeIgniter", "HTML", "CSS", "JavaScript", "jQuery", "Bootstrap"],
+          "Features": [
+            "Online ordering of charitable services (water, meals, Qurans)",
+            "Execution tracking with photo and video documentation",
+            "Secure and user-friendly donation process",
+            "Fully responsive design across all devices",
+            "Admin dashboard to manage orders and donations",
+            "Customizable services based on occasions or recipients",
+            "Support for recurring donations"
+          ],
+          "Github_Allowed": "false"
+        },
+        {
+          "id": "3",
+          "Title": "Bjda",
+          "Description": "BJDA – A Specialized Platform for Booking Wedding Venues and Sending Invitations",
+          "Img": "/project-img/bjda.png",
+          "Link": "https://www.bjda.com/",
+          "TechStack": ["laravel", "html", "css", "javascript", "tailwind", "jquery"],
+          "Features": [
+              "Online reservation for wedding halls and event venues",
+              "Search and filter by city, date, and hall type",
+              "Custom invitation design and QR code generation",
+              "Mobile-friendly interface for easy access on all devices",
+              "Integration with WhatsApp for sending invitations",
+              "Multilingual support (Arabic-focused UI)"
+          ],
+          "Github_Allowed": "false"
         }, 
         {
-            "id": "2",
+          "id": "4",
+          "Title": "Chate App",
+          "Description": "A simple mobile chat application built using React Native and Expo. It supports user authentication and real-time messaging via Firebase, offering a clean and intuitive chat experience. This project marked the beginning of my mobile development journey.",
+          "Img": "/project-img/chateapp.png",
+          "Link": "https://github.com/Al-homaidi/chate-app",
+          "TechStack": ["React Native", "Expo", "Tailwind (NativeWind)", "Firebase"],
+          "Features": [
+            "User authentication via Firebase Authentication",
+            "Real-time messaging using Firebase Firestore",
+            "List of registered users with chat access",
+            "Clean and minimal chat interface",
+            "Built with Expo Router and react-hook-form",
+            "Responsive styling using NativeWind"
+          ],
+          "Github_Allowed": "true"
+        },
+        {
+          "id": "5",
+          "Title": "Store App",
+          "Description": "A fully-featured mobile store application built using React Native and Expo. Designed with a smooth, visually appealing interface and robust functionality, the app supports multiple languages, currencies, themes, and a complete e-commerce experience across mobile and web platforms.",
+          "Img": "/project-img/storapp.png",
+          "Link": "https://github.com/Al-homaidi/chate-app",
+          "TechStack": ["React Native", "Expo", "Tailwind (NativeWind)", "Firebase"],
+          "Features": [
+            "Attractive and fluid UI with smooth transitions",
+            "Multilingual support: Arabic (RTL), English, and Turkish",
+            "Dynamic theme system: Light, Dark, or System-based",
+            "Multi-currency support: USD, EUR, GBP, TRY, SAR with automatic price conversion",
+            "Full authentication system: login, signup, and user data storage",
+            "Integrated shopping cart: add/remove items, adjust quantities, calculate total",
+            "Order system: view past orders, track status, and view full details",
+            "Personal profile page: edit settings, change language/currency/theme, share app",
+            "Welcome screen shown only on first launch",
+            "Responsive design compatible with both mobile and web",
+            "Built professionally using best practices in React Native and Expo"
+          ],
+          "Github_Allowed": "true"
+        },                 
+        {
+            "id": "6",
             "Title": "Fall-algharbiya",
             "Description": "A multi-service platform offering integrated solutions in IT, safety systems, e-services, real estate, general contracting, and commercial brokerage.",
             "Img": "/project-img/fall-algharbiya.png",
@@ -34,25 +109,7 @@
               "Dynamic section-based navigation using Angular Router"
             ],
             "Github_Allowed": "false"
-        },
-        {
-            "id": "3",
-            "Title": "Manahel",
-            "Description": "A charitable platform enabling users to contribute to various good deeds in Makkah, including water distribution, Quran donations, and food services for pilgrims.",
-            "Img": "/project-img/manahel.png",
-            "Link": "https://manahel.net/",
-            "TechStack": ["codeigniter", "html", "css", "javascript", "jquery", "bootstrap"],
-            "Features": [
-              "Online ordering of charity services like water, meals, and Quran copies",
-              "Execution tracking with photo and video documentation",
-              "Secure and simple donation process",
-              "Responsive design compatible with all devices",
-              "User-friendly dashboard for managing orders and donations",
-              "Service customization based on occasion and recipient",
-              "Support for recurring charitable contributions"
-            ],
-            "Github_Allowed": "false"
-        }  
+        }
     ],
     "certificates": [
       {

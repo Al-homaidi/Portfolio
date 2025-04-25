@@ -79,7 +79,7 @@ const TYPING_SPEED = 100;
 const ERASING_SPEED = 50;
 const PAUSE_DURATION = 2000;
 const WORDS = ["Crafting Engaging Web Experiences", "Creative Web Designer", "JavaScript & React Expert", "Tech Passionate Coder"];
-const TECH_STACK = ["Javascript", "React", "Tailwind"];
+const TECH_STACK = ["Javascript", "React", "Tailwind", "React Native", "Ionic", "Apps"];
 const SOCIAL_LINKS = [
   { icon: Github, link: "https://github.com/Al-homaidi" },
   { icon: Linkedin, link: "https://www.linkedin.com/in/mohammed-mahfouz-al-homaidi-1876b631b/" },
