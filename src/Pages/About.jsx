@@ -122,7 +122,7 @@ const AboutPage = () => {
     const storedCertificates = JSON.parse(localStorage.getItem("certificates") || "[]");
 
     
-    const startDate = new Date("2023-10-12");
+    const startDate = new Date("2023-01-12");
     const today = new Date();
     const experience = today.getFullYear() - startDate.getFullYear() -
       (today < new Date(today.getFullYear(), startDate.getMonth(), startDate.getDate()) ? 1 : 0);
