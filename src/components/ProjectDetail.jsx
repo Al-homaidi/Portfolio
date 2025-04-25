@@ -2,9 +2,10 @@ import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import {
   ArrowLeft, ExternalLink, Github, Code2, Star,
-  ChevronRight, Layers, Layout, Globe, Package, Cpu, Code,
+  ChevronRight, Layers, Layout, Globe, Package, Cpu, Code, Image,
 } from "lucide-react";
 import Swal from 'sweetalert2';
+import SwiperCustom from './SwiperCustom';
 
 const TECH_ICONS = {
   React: Globe,
@@ -218,6 +219,22 @@ const ProjectDetails = () => {
                   <p className="text-sm md:text-base text-gray-400 opacity-50">No technologies added.</p>
                 )}
               </div>
+
+              {project.photos_t !== 'false' && project.hooks && (
+                <div className="mt-8 space-y-4 md:space-y-6">
+                  <h3 className="text-lg md:text-xl font-semibold text-white/90 mb-4 flex items-center gap-2 md:gap-3">
+                    <Image className="w-4 h-4 md:w-5 md:h-5 text-blue-400" />
+                    Project Gallery
+                  </h3>
+                  <div className="w-[100%] h-[100%]">
+                    <SwiperCustom 
+                      images={project.hooks} 
+                      title={project.Title} 
+                    />
+                  </div>
+                </div>
+              )}
+              
             </div>
 
             <div className="space-y-6 md:space-y-10 animate-slideInRight">
@@ -314,6 +331,56 @@ const ProjectDetails = () => {
             opacity: 1;
             transform: translateX(0);
           }
+        }
+        @keyframes scaleIn {
+          from {
+            opacity: 0;
+            transform: scale(0.8);
+          }
+          to {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+        .animate-scaleIn {
+          animation: scaleIn 0.5s ease-out;
+        }
+
+        /* Swiper Custom Styles */
+        :global(.swiper-button-next),
+        :global(.swiper-button-prev) {
+          background: linear-gradient(to right, #60a5fa, #a78bfa);
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          color: white;
+          transition: all 0.3s ease;
+        }
+
+        :global(.swiper-button-next:hover),
+        :global(.swiper-button-prev:hover) {
+          transform: scale(1.1);
+          box-shadow: 0 0 15px rgba(96, 165, 250, 0.5);
+        }
+
+        :global(.swiper-button-next:after),
+        :global(.swiper-button-prev:after) {
+          font-size: 18px;
+          font-weight: bold;
+        }
+
+        :global(.swiper-pagination-bullet) {
+          background: linear-gradient(to right, #60a5fa, #a78bfa);
+          opacity: 0.5;
+          width: 10px;
+          height: 10px;
+          transition: all 0.3s ease;
+        }
+
+        :global(.swiper-pagination-bullet-active) {
+          opacity: 1;
+          transform: scale(1.2);
+          box-shadow: 0 0 10px rgba(96, 165, 250, 0.5);
         }
       `}</style>
     </div>
