@@ -71,7 +71,6 @@
           "Link": "https://github.com/Al-homaidi/chate-app",
           "TechStack": ["React Native", "Expo", "Tailwind (NativeWind)", "Firebase"],
           "Features": [
-            
             "User authentication via Firebase Authentication",
             "Real-time messaging using Firebase Firestore",
             "List of registered users with chat access",
