@@ -265,11 +265,11 @@ export default function FullWidthTabs() {
               label="Projects"
               {...a11yProps(0)}
             />
-            {/* <Tab
+            <Tab
               icon={<Award className="mb-2 w-5 h-5 transition-all duration-300" />}
               label="Certificates"
               {...a11yProps(1)}
-            /> */}
+            />
             <Tab
               icon={<Boxes className="mb-2 w-5 h-5 transition-all duration-300" />}
               label="Tech Stack"
@@ -308,7 +308,7 @@ export default function FullWidthTabs() {
             )}
           </TabPanel>
 
-          {/* <TabPanel value={value} index={1} dir={theme.direction}>
+          <TabPanel value={value} index={1} dir={theme.direction}>
             <div className="container mx-auto flex justify-center items-center overflow-hidden">
               <div className="grid grid-cols-1 md:grid-cols-3 md:gap-5 gap-4">
                 {displayedCertificates.map((certificate, index) => (
@@ -330,9 +330,9 @@ export default function FullWidthTabs() {
                 />
               </div>
             )}
-          </TabPanel> */}
+          </TabPanel>
 
-          <TabPanel value={value} index={1} dir={theme.direction}>
+          <TabPanel value={value} index={2} dir={theme.direction}>
             <div className="container mx-auto flex justify-center items-center overflow-hidden pb-[5%]">
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 lg:gap-8 gap-5">
                 {techStacks.map((stack, index) => (

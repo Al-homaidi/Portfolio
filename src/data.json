@@ -145,10 +145,7 @@
     ],
     "certificates": [
       {
-        "Img": "/images/certificate1.png"
-      },
-      {
-        "Img": "/images/certificate2.png"
+        "Img": "/certificate-img/Coursera-IVCGM190AOSW.png"
       }
     ]
   }
