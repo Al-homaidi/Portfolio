@@ -182,14 +182,14 @@ const AboutPage = () => {
       description: "Innovative web solutions crafted",
       animation: "fade-right",
     },
-    // {
-    //   icon: Award,
-    //   color: "from-[#a855f7] to-[#6366f1]",
-    //   value: totalCertificates,
-    //   label: "Certificates",
-    //   description: "Professional skills validated",
-    //   animation: "fade-up",
-    // },
+    {
+      icon: Award,
+      color: "from-[#a855f7] to-[#6366f1]",
+      value: totalCertificates,
+      label: "Certificates",
+      description: "Professional skills validated",
+      animation: "fade-up",
+    },
     {
       icon: Globe,
       color: "from-[#6366f1] to-[#a855f7]",
