@@ -3,7 +3,7 @@ import { Modal, IconButton, Box, Fade, Backdrop, Zoom, Typography } from "@mui/m
 import CloseIcon from "@mui/icons-material/Close"
 import FullscreenIcon from "@mui/icons-material/Fullscreen"
 
-const Certificate = ({ ImgSertif }) => {
+const Certificate = ({ ImgSertif, ImgLink }) => {
 	const [open, setOpen] = useState(false)
 
 	const handleOpen = () => {
@@ -161,8 +161,8 @@ const Certificate = ({ ImgSertif }) => {
 						onClick={handleClose}
 						sx={{
 							position: "absolute",
-							right: 16,
-							top: 16,
+							right: 5,
+							top: 45,
 							color: "white",
 							bgcolor: "rgba(0,0,0,0.6)",
 							zIndex: 1,
@@ -177,6 +177,10 @@ const Certificate = ({ ImgSertif }) => {
 					</IconButton>
 
 					{/* Modal Image */}
+					<div className="flex gap-1 items-center justify-center mb-4">
+						<span className="text-white flex-2">Certificate link : </span>
+						<a className="text-blue-600 underline decoration-1 overflow-hidden flex-1" href={ImgLink}>{ImgLink}</a>
+					</div>
 					<img
 						src={ImgSertif}
 						alt="Certificate Full View"
