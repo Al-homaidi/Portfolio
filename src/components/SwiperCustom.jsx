@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { ChevronLeft, ChevronRight, Eye, X } from 'lucide-react';
+import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 
 const SwiperCustom = ({ images, title }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -10,7 +10,6 @@ const SwiperCustom = ({ images, title }) => {
   const autoPlayInterval = useRef(null);
   const modalRef = useRef(null);
 
-  // Auto play functionality
   useEffect(() => {
     autoPlayInterval.current = setInterval(() => {
       if (!isAnimating && !isModalOpen) {
@@ -25,7 +24,6 @@ const SwiperCustom = ({ images, title }) => {
     };
   }, [currentIndex, isAnimating, isModalOpen]);
 
-  // Close modal when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (modalRef.current && !modalRef.current.contains(event.target)) {
@@ -39,7 +37,6 @@ const SwiperCustom = ({ images, title }) => {
     };
   }, []);
 
-  // Close modal with Escape key
   useEffect(() => {
     const handleEscapeKey = (event) => {
       if (event.key === 'Escape') {
@@ -67,13 +64,6 @@ const SwiperCustom = ({ images, title }) => {
     setTimeout(() => setIsAnimating(false), 300);
   };
 
-  const handleDotClick = (index) => {
-    if (isAnimating || index === currentIndex) return;
-    setIsAnimating(true);
-    setCurrentIndex(index);
-    setTimeout(() => setIsAnimating(false), 300);
-  };
-
   const handleTouchStart = (e) => {
     touchStartX.current = e.touches[0].clientX;
   };
@@ -95,7 +85,8 @@ const SwiperCustom = ({ images, title }) => {
     }
   };
 
-  const openModal = () => {
+  const openModal = (index) => {
+    setCurrentIndex(index);
     setIsModalOpen(true);
   };
 
@@ -106,16 +97,7 @@ const SwiperCustom = ({ images, title }) => {
   return (
     <>
       <div className="relative w-full h-full overflow-hidden rounded-xl group">
-        {/* Eye Icon */}
-        <button 
-          onClick={openModal}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-12 h-12 md:w-16 md:h-16 rounded-full bg-gradient-to-r from-blue-400 to-purple-400 text-white flex items-center justify-center shadow-lg transition-all duration-300 md:opacity-0 md:group-hover:opacity-100 hover:scale-110 hover:shadow-blue-500/30 hover:shadow-purple-500/30"
-          aria-label="View full image"
-        >
-          <Eye className="w-6 h-6 md:w-8 md:h-8" />
-        </button>
-
-        <div 
+        <div
           className="flex transition-transform duration-300 ease-in-out"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
           onTouchStart={handleTouchStart}
@@ -123,72 +105,70 @@ const SwiperCustom = ({ images, title }) => {
           onTouchEnd={handleTouchEnd}
         >
           {images.map((url, index) => (
-            <div 
-              key={index} 
-              className="w-full flex-shrink-0 aspect-video"
-            >
-              <div className="relative w-full h-full rounded-xl overflow-hidden bg-black/20">
+            <div key={index} className="w-full flex-shrink-0 aspect-video">
+              <div
+                onClick={() => openModal(index)}
+                className="relative w-full h-full rounded-xl overflow-hidden bg-black/20 cursor-zoom-in"
+              >
                 <img
                   src={url}
                   alt={`${title} - Image ${index + 1}`}
                   className="w-full h-full object-contain"
                 />
+                <div className="absolute inset-0 flex flex-col items-center justify-center z-20 w-full h-full bg-black/0 md:bg-black/0 md:group-hover:bg-black/40 transition-all duration-300 opacity-100 md:opacity-0 md:group-hover:opacity-100">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8 mb-2 text-white drop-shadow-lg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4 8V6a2 2 0 0 1 2-2h2m8 0h2a2 2 0 0 1 2 2v2m0 8v2a2 2 0 0 1-2 2h-2m-8 0H6a2 2 0 0 1-2-2v-2" />
+                  </svg>
+                  <span className="text-white text-lg font-semibold drop-shadow-lg">View photo</span>
+                </div>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Navigation Buttons */}
-        <button 
+        <button
           onClick={handlePrev}
-          className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 md:w-10 md:h-10 rounded-full bg-gradient-to-r from-blue-400 to-purple-400 text-white flex items-center justify-center shadow-lg hover:scale-110 transition-transform z-10"
-          aria-label="Previous slide"
+          className="absolute left-0 top-1/2 -translate-y-1/2 w-8 h-8 md:w-10 md:h-10 rounded-1 text-white flex items-center justify-center shadow-lg hover:scale-110 transition-transform z-10"
         >
           <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
         </button>
-        <button 
+
+        <button
           onClick={handleNext}
-          className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 md:w-10 md:h-10 rounded-full bg-gradient-to-r from-blue-400 to-purple-400 text-white flex items-center justify-center shadow-lg hover:scale-110 transition-transform z-10"
-          aria-label="Next slide"
+          className="absolute right-0 top-1/2 -translate-y-1/2 w-8 h-8 md:w-10 md:h-10 rounded-1 text-white flex items-center justify-center shadow-lg hover:scale-110 transition-transform z-10"
         >
           <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
         </button>
-
-        {/* Pagination Dots */}
-        <div className="absolute bottom-3 left-0 right-0 flex justify-center gap-2 z-10">
-          {images.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => handleDotClick(index)}
-              className={`w-2 h-2 md:w-3 md:h-3 rounded-full transition-all ${
-                index === currentIndex 
-                  ? 'bg-gradient-to-r from-blue-400 to-purple-400 scale-125 shadow-md' 
-                  : 'bg-white/50'
-              }`}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
-        </div>
       </div>
 
-      {/* Modal */}
       {isModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm animate-fadeIn">
-          <div 
-            ref={modalRef}
-            className="relative max-w-[90%] h-[90vh] rounded-xl overflow-hidden animate-scaleIn"
-          >
-            <button 
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm animate-fadeIn">
+          <div ref={modalRef} className="relative w-full h-full flex items-center justify-center">
+            <button
               onClick={closeModal}
-              className="absolute top-3 right-3 z-20 w-8 h-8 md:w-10 md:h-10 rounded-full bg-black/50 backdrop-blur-sm text-white flex items-center justify-center shadow-lg transition-all duration-300 hover:bg-black/70 hover:scale-110"
-              aria-label="Close modal"
+              className="absolute top-5 right-5 z-50 w-10 h-10 rounded-full bg-black/60 text-white flex items-center justify-center shadow-lg transition-all duration-300 hover:bg-black/80 hover:scale-110"
             >
-              <X className="w-4 h-4 md:w-5 md:h-5" />
+              <X className="w-6 h-6" />
             </button>
+
+            <button
+              onClick={handlePrev}
+              className="absolute left-5 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/60 text-white flex items-center justify-center shadow-lg hover:scale-110 transition-transform z-40"
+            >
+              <ChevronLeft className="w-7 h-7" />
+            </button>
+
+            <button
+              onClick={handleNext}
+              className="absolute right-5 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/60 text-white flex items-center justify-center shadow-lg hover:scale-110 transition-transform z-40"
+            >
+              <ChevronRight className="w-7 h-7" />
+            </button>
+
             <img
               src={images[currentIndex]}
               alt={`${title} - Full Image ${currentIndex + 1}`}
-              className="w-full h-full object-contain"
+              className="max-w-full max-h-[90vh] object-contain mx-auto"
             />
           </div>
         </div>
@@ -197,4 +177,4 @@ const SwiperCustom = ({ images, title }) => {
   );
 };
 
-export default SwiperCustom; 
+export default SwiperCustom;

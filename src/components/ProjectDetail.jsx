@@ -219,21 +219,6 @@ const ProjectDetails = () => {
                   <p className="text-sm md:text-base text-gray-400 opacity-50">No technologies added.</p>
                 )}
               </div>
-
-              {project.photos_t !== 'false' && project.hooks && (
-                <div className="mt-8 space-y-4 md:space-y-6">
-                  <h3 className="text-lg md:text-xl font-semibold text-white/90 mb-4 flex items-center gap-2 md:gap-3">
-                    <Image className="w-4 h-4 md:w-5 md:h-5 text-blue-400" />
-                    Project Gallery
-                  </h3>
-                  <div className="w-[100%] h-[100%]">
-                    <SwiperCustom 
-                      images={project.hooks} 
-                      title={project.Title} 
-                    />
-                  </div>
-                </div>
-              )}
               
             </div>
 
@@ -241,13 +226,23 @@ const ProjectDetails = () => {
               <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl group">
               
                 <div className="absolute inset-0 bg-gradient-to-t from-[#030014] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <img
-                  src={project.Img}
-                  alt={project.Title}
-                  className="w-full  object-contain max-h-[400px] transform transition-transform duration-700 will-change-transform group-hover:scale-105"
-                  onLoad={() => setIsImageLoaded(true)}
-                />
-                <div className="absolute inset-0 border-2 border-white/0 group-hover:border-white/10 transition-colors duration-300 rounded-2xl" />
+                {project.photos_t !== 'false' && project.hooks && (
+                  <SwiperCustom 
+                    images={project.hooks} 
+                    title={project.Title} 
+                  />
+                )}
+                {project.photos_t !== 'true' && (
+                  <>
+                  <img
+                    src={project.Img}
+                    alt={project.Title}
+                    className="w-full  object-contain max-h-[400px] transform transition-transform duration-700 will-change-transform group-hover:scale-105"
+                    onLoad={() => setIsImageLoaded(true)}
+                  />
+                  <div className="absolute inset-0 border-2 border-white/0 group-hover:border-white/10 transition-colors duration-300 rounded-2xl" />
+                </>
+                )}
               </div>
 
               {/* Fitur Utama */}

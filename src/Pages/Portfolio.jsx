@@ -163,7 +163,7 @@ export default function FullWidthTabs() {
       setShowAllProjects(prev => !prev);
     } else {
       setShowAllCertificates(prev => !prev);
-      
+
     }
   }, []);
 
