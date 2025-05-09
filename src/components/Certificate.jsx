@@ -157,7 +157,6 @@ const Certificate = ({ ImgSertif, ImgLink }) => {
 						},
 					}}>
 					{/* Close Button */}
-					
 					<IconButton
 						onClick={handleClose}
 						sx={{
