@@ -140,12 +140,12 @@ export default function FullWidthTabs() {
         ...project,
         TechStack: project.TechStack || [],
       }));
-  
+
       const certificateData = data.certificates;
-  
+
       setProjects(projectData);
       setCertificates(certificateData);
-  
+
       // Optional: تخزين محلي
       localStorage.setItem("projects", JSON.stringify(projectData));
       localStorage.setItem("certificates", JSON.stringify(certificateData));
@@ -169,7 +169,7 @@ export default function FullWidthTabs() {
 
   const displayedProjects = showAllProjects ? projects : projects.slice(0, initialItems);
   const displayedCertificates = showAllCertificates ? certificates : certificates.slice(0, initialItems);
-  
+
   return (
     <div className="md:px-[10%] px-[5%] w-full sm:mt-0 mt-[3rem] bg-[#030014] overflow-hidden" id="Portfolio">
       {/* Header section - unchanged */}
@@ -182,11 +182,11 @@ export default function FullWidthTabs() {
             backgroundClip: 'text',
             WebkitTextFillColor: 'transparent'
           }}>
-           Portfolio Showcase
+            Portfolio Showcase
           </span>
         </h2>
         <p className="text-slate-400 max-w-2xl mx-auto text-sm md:text-base mt-2">
-          Explore my journey through projects, certifications, and technical expertise. 
+          Explore my journey through projects, certifications, and technical expertise.
           Each section represents a milestone in my continuous learning path.
         </p>
       </div>
@@ -279,75 +279,76 @@ export default function FullWidthTabs() {
           </Tabs>
         </AppBar>
 
-          <TabPanel value={value} index={0} dir={theme.direction}>
-            <div className="container mx-auto flex justify-center items-center overflow-hidden">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-3 gap-5">
-                {displayedProjects.map((project, index) => (
-                  <div
-                    key={project.id || index}
-                    data-aos={index % 3 === 0 ? "fade-up-right" : index % 3 === 1 ? "fade-up" : "fade-up-left"}
-                    data-aos-duration={index % 3 === 0 ? "1000" : index % 3 === 1 ? "1200" : "1000"}
-                  >
-                    <CardProject
-                      Img={project.Img}
-                      Title={project.Title}
-                      Description={project.Description}
-                      Link={project.Link}
-                      id={project.id}
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-            {projects.length > initialItems && (
-              <div className="mt-6 w-full flex justify-start">
-                <ToggleButton
-                  onClick={() => toggleShowMore('projects')}
-                  isShowingMore={showAllProjects}
-                />
-              </div>
-            )}
-          </TabPanel>
+        <TabPanel value={value} index={0} dir={theme.direction}>
+          <div className="container mx-auto flex justify-center items-center overflow-hidden">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-3 gap-5">
+              {displayedProjects.map((project, index) => (
+                <div
+                  key={project.id || index}
+                  data-aos={index % 3 === 0 ? "fade-up-right" : index % 3 === 1 ? "fade-up" : "fade-up-left"}
+                  data-aos-duration={index % 3 === 0 ? "1000" : index % 3 === 1 ? "1200" : "1000"}
+                >
+                  <CardProject
+                    Img={project.Img}
+                    Title={project.Title}
+                    Description={project.Description}
+                    Link={project.Link}
+                    id={project.id}
+                  />
+                </div>
 
-          <TabPanel value={value} index={1} dir={theme.direction}>
-            <div className="container mx-auto flex justify-center items-center overflow-hidden">
-              <div className="grid grid-cols-1 md:grid-cols-3 md:gap-5 gap-4">
-                {displayedCertificates.map((certificate, index) => (
-                  <div
-                    key={index}
-                    data-aos={index % 3 === 0 ? "fade-up-right" : index % 3 === 1 ? "fade-up" : "fade-up-left"}
-                    data-aos-duration={index % 3 === 0 ? "1000" : index % 3 === 1 ? "1200" : "1000"}
-                  >
-                    <Certificate ImgSertif={certificate.Img} ImgLink={certificate.Link} />
-                  </div>
-                ))}
-              </div>
+              ))}
             </div>
-            {certificates.length > initialItems && (
-              <div className="mt-6 w-full flex justify-start">
-                <ToggleButton
-                  onClick={() => toggleShowMore('certificates')}
-                  isShowingMore={showAllCertificates}
-                />
-              </div>
-            )}
-          </TabPanel>
+          </div>
+          {projects.length > initialItems && (
+            <div className="mt-6 w-full flex justify-start">
+              <ToggleButton
+                onClick={() => toggleShowMore('projects')}
+                isShowingMore={showAllProjects}
+              />
+            </div>
+          )}
+        </TabPanel>
 
-          <TabPanel value={value} index={2} dir={theme.direction}>
-            <div className="container mx-auto flex justify-center items-center overflow-hidden pb-[5%]">
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 lg:gap-8 gap-5">
-                {techStacks.map((stack, index) => (
-                  <div
-                    key={index}
-                    data-aos={index % 3 === 0 ? "fade-up-right" : index % 3 === 1 ? "fade-up" : "fade-up-left"}
-                    data-aos-duration={index % 3 === 0 ? "1000" : index % 3 === 1 ? "1200" : "1000"}
-                  >
-                    <TechStackIcon TechStackIcon={stack.icon} Language={stack.language} />
-                  </div>
-                ))}
-              </div>
+        <TabPanel value={value} index={1} dir={theme.direction}>
+          <div className="container mx-auto flex justify-center items-center overflow-hidden">
+            <div className="grid grid-cols-1 md:grid-cols-3 md:gap-5 gap-4">
+              {displayedCertificates.map((certificate, index) => (
+                <div
+                  key={index}
+                  data-aos={index % 3 === 0 ? "fade-up-right" : index % 3 === 1 ? "fade-up" : "fade-up-left"}
+                  data-aos-duration={index % 3 === 0 ? "1000" : index % 3 === 1 ? "1200" : "1000"}
+                >
+                  <Certificate ImgSertif={certificate.Img} ImgLink={certificate.Link} />
+                </div>
+              ))}
             </div>
-          </TabPanel>
+          </div>
+          {certificates.length > initialItems && (
+            <div className="mt-6 w-full flex justify-start">
+              <ToggleButton
+                onClick={() => toggleShowMore('certificates')}
+                isShowingMore={showAllCertificates}
+              />
+            </div>
+          )}
+        </TabPanel>
+
+        <TabPanel value={value} index={2} dir={theme.direction}>
+          <div className="container mx-auto flex justify-center items-center overflow-hidden pb-[5%]">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 lg:gap-8 gap-5">
+              {techStacks.map((stack, index) => (
+                <div
+                  key={index}
+                  data-aos={index % 3 === 0 ? "fade-up-right" : index % 3 === 1 ? "fade-up" : "fade-up-left"}
+                  data-aos-duration={index % 3 === 0 ? "1000" : index % 3 === 1 ? "1200" : "1000"}
+                >
+                  <TechStackIcon TechStackIcon={stack.icon} Language={stack.language} />
+                </div>
+              ))}
+            </div>
+          </div>
+        </TabPanel>
       </Box>
     </div>
   );
