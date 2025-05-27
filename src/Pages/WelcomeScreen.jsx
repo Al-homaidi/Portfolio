@@ -6,7 +6,7 @@ import 'aos/dist/aos.css';
 
 const TypewriterEffect = ({ text }) => {
   const [displayText, setDisplayText] = useState('');
-  
+
   useEffect(() => {
     let index = 0;
     const timer = setInterval(() => {
@@ -17,7 +17,7 @@ const TypewriterEffect = ({ text }) => {
         clearInterval(timer);
       }
     }, 200);
-    
+
     return () => clearInterval(timer);
   }, [text]);
 
@@ -61,7 +61,7 @@ const WelcomeScreen = ({ onLoadingComplete }) => {
         onLoadingComplete?.();
       }, 1000);
     }, 4000);
-    
+
     return () => clearTimeout(timer);
   }, [onLoadingComplete]);
 
@@ -101,11 +101,11 @@ const WelcomeScreen = ({ onLoadingComplete }) => {
           variants={containerVariants}
         >
           <BackgroundEffect />
-          
+
           <div className="relative min-h-screen flex items-center justify-center px-4">
             <div className="w-full max-w-4xl mx-auto">
               {/* Icons */}
-              <motion.div 
+              <motion.div
                 className="flex justify-center gap-3 sm:gap-4 md:gap-8 mb-6 sm:mb-8 md:mb-12"
                 variants={childVariants}
               >
@@ -117,7 +117,7 @@ const WelcomeScreen = ({ onLoadingComplete }) => {
               </motion.div>
 
               {/* Welcome Text */}
-              <motion.div 
+              <motion.div
                 className="text-center mb-6 sm:mb-8 md:mb-12"
                 variants={childVariants}
               >
@@ -135,7 +135,7 @@ const WelcomeScreen = ({ onLoadingComplete }) => {
                   </div>
                   <div>
                     <span data-aos="fade-up" data-aos-delay="800" className="inline-block px-2 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-                     Portfolio
+                      Portfolio
                     </span>{' '}
                     <span data-aos="fade-up" data-aos-delay="1000" className="inline-block px-2 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
                       Website
@@ -145,11 +145,12 @@ const WelcomeScreen = ({ onLoadingComplete }) => {
               </motion.div>
 
               {/* Website Link */}
-              <motion.div 
+              <motion.div
                 className="text-center"
                 variants={childVariants}
                 data-aos="fade-up"
                 data-aos-delay="1200"
+
               >
                 <div
                   className="inline-flex items-center gap-2 px-4 py-2 sm:px-6 sm:py-3 rounded-full relative group hover:scale-105 transition-transform duration-300"
