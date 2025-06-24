@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة الألوان</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        h1 {
+            text-align: center;
+            color: #135853;
+            margin-bottom: 30px;
+        }
+
+        .color-section {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .color-section h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #0F9386;
+        }
+
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 20px;
+            justify-items: center;
+        }
+
+        .color-item {
+            width: 100%;
+            max-width: 180px;
+            /* لضمان حجم معقول على الشاشات الكبيرة */
+            text-align: center;
+            background-color: #fdfdfd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s ease-in-out;
+            padding-bottom: 15px;
+            /* مسافة للمعلومات تحت المربع */
+        }
+
+        .color-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .color-box {
+            width: 100%;
+            padding-top: 100%;
+            /* لجعل المربع مربعًا حقيقيًا (نسبة عرض إلى ارتفاع 1:1) */
+            background-color: #ccc;
+            /* لون افتراضي */
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        .color-info {
+            padding: 10px 5px 0;
+            font-size: 0.9em;
+            word-break: break-word;
+            /* لكسر الكلمات الطويلة مثل رموز الألوان */
+        }
+
+        .color-name {
+            font-weight: bold;
+            color: #555;
+            margin-bottom: 5px;
+        }
+
+        .color-code {
+            color: #777;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        /* تنسيقات الوضع الداكن */
+        .color-section.dark-mode {
+            background-color: #2c2c2c;
+            color: #e0e0e0;
+        }
+
+        .dark-mode h2 {
+            color: #10B2A2;
+        }
+
+        .dark-mode .color-item {
+            background-color: #3a3a3a;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        .dark-mode .color-box {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .dark-mode .color-name {
+            color: #d0d0d0;
+        }
+
+        .dark-mode .color-code {
+            color: #b0b0b0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>لوحة الألوان</h1>
+
+    <div class="color-section light-mode">
+        <h2>ألوان الوضع النهاري (Light Mode)</h2>
+        <div class="color-grid">
+            <div class="color-item">
+                <div class="color-box" style="background-color: #135853;"></div>
+                <div class="color-info">
+                    <div class="color-name">mainColor</div>
+                    <div class="color-code">#135853</div>
+                </div>
+            </div>
+            <div class="color-item">
+                <div class="color-box" style="background-color: #000000;"></div>
+                <div class="color-info">
+                    <div class="color-name">text</div>
+                    <div class="color-code">#000000</div>
+                </div>
+            </div>
+            <div class="color-item">
+                <div class="color-box" style="background-color: #3E3E3E;"></div>
+                <div class="color-info">
+                    <div class="color-name">subText</div>
+                    <div class="color-code">#3E3E3E</div>
+                </div>
+            </div>
+            <div class="color-item">
+                <div class="color-box" style="background-color: #FFFFFF;"></div>
+                <div class="color-info">
+                    <div class="color-name">background</div>
+                    <div class="color-code">#FFFFFF</div>
+                </div>
+            </div>
+            <div class="color-item">
+                <div class="color-box" style="background-color: #FBFFFF;"></div>
+                <div class="color-info">
+                    <div class="color-name">card</div>
+                    <div class="color-code">#FBFFFF</div>
+                </div>
+            </div>
+            <div class="color-item">
+                <div class="color-box" style="background-color: #135853;"></div>
+                <div class="color-info">
+                    <div class="color-name">button</div>
+                    <div class="color-code">#135853</div>
+                </div>
+            </div>
+            <div class="color-item">
+                <div class="color-box" style="background-color: #0F9386;"></div>
+                <div class="color-info">
+                    <div class="color-name">primary</div>
+                    <div class="color-code">#0F9386</div>
+                </div>
+            </div>
+            <div class="color-item">
+                <div class="color-box" style="background-color: #FFAE13;"></div>
+                <div class="color-info">
+                    <div class="color-name">alert</div>
+                    <div class="color-code">#FFAE13</div>
+                </div>
+            </div>
+            <div class="color-item">
+                <div class="color-box" style="background-color: #999999;"></div>
+                <div class="color-info">
+                    <div class="color-name">placeholder</div>
+                    <div class="color-code">#999999</div>
+                </div>
+            </div>
+            <div class="color-item">
+                <div class="color-box" style="background-color: #FFEB5A;"></div>
+                <div class="color-info">
+                    <div class="color-name">badge</div>
+                    <div class="color-code">#FFEB5A</div>
+                </div>
+            </div>
+            <div class="color-item">
+                <div class="color-box" style="background-color: #A2F7F1;"></div>
+                <div class="color-info">
+                    <div class="color-name">onboardingBg</div>
+                    <div class="color-code">#A2F7F1</div>
+                </div>
+            </div>
+            <div class="color-item">
+                <div class="color-box" style="background-color: #5E5F60;"></div>
+                <div class="color-info">
+                    <div class="color-name">icon</div>
+                    <div class="color-code">#5E5F60</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="color-section dark-mode">
+        <h2>ألوان الوضع الليلي (Dark Mode)</h2>
+        <div class="color-grid">
+            <div class="color-item">
+                <div class="color-box" style="background-color: #0b7f6d;"></div>
+                <div class="color-info">
+                    <div class="color-name">mainColor</div>
+                    <div class="color-code">#0b7f6d</div>
+                </div>
+            </div>
+            <div class="color-item">
+                <div class="color-box" style="background-color: #FFFFFF;"></div>
+                <div class="color-info">
+                    <div class="color-name">text</div>
+                    <div class="color-code">#FFFFFF</div>
+                </div>
+            </div>
+            <div class="color-item">
+                <div class="color-box" style="background-color: #CCCCCC;"></div>
+                <div class="color-info">
+                    <div class="color-name">subText</div>
+                    <div class="color-code">#CCCCCC</div>
+                </div>
+            </div>
+            <div class="color-item">
+                <div class="color-box" style="background-color: #121212;"></div>
+                <div class="color-info">
+                    <div class="color-name">background</div>
+                    <div class="color-code">#121212</div>
+                </div>
+            </div>
+            <div class="color-item">
+                <div class="color-box" style="background-color: #1E1E1E;"></div>
+                <div class="color-info">
+                    <div class="color-name">card</div>
+                    <div class="color-code">#1E1E1E</div>
+                </div>
+            </div>
+            <div class="color-item">
+                <div class="color-box" style="background-color: #0b7f6d;"></div>
+                <div class="color-info">
+                    <div class="color-name">button</div>
+                    <div class="color-code">#0b7f6d</div>
+                </div>
+            </div>
+            <div class="color-item">
+                <div class="color-box" style="background-color: #10B2A2;"></div>
+                <div class="color-info">
+                    <div class="color-name">primary</div>
+                    <div class="color-code">#10B2A2</div>
+                </div>
+            </div>
+            <div class="color-item">
+                <div class="color-box" style="background-color: #FFC74F;"></div>
+                <div class="color-info">
+                    <div class="color-name">alert</div>
+                    <div class="color-code">#FFC74F</div>
+                </div>
+            </div>
+            <div class="color-item">
+                <div class="color-box" style="background-color: #AAAAAA;"></div>
+                <div class="color-info">
+                    <div class="color-name">placeholder</div>
+                    <div class="color-code">#AAAAAA</div>
+                </div>
+            </div>
+            <div class="color-item">
+                <div class="color-box" style="background-color: #FFF176;"></div>
+                <div class="color-info">
+                    <div class="color-name">badge</div>
+                    <div class="color-code">#FFF176</div>
+                </div>
+            </div>
+            <div class="color-item">
+                <div class="color-box" style="background-color: #4CD9D0;"></div>
+                <div class="color-info">
+                    <div class="color-name">onboardingBg</div>
+                    <div class="color-code">#4CD9D0</div>
+                </div>
+            </div>
+            <div class="color-item">
+                <div class="color-box" style="background-color: #AAAAAA;"></div>
+                <div class="color-info">
+                    <div class="color-name">icon</div>
+                    <div class="color-code">#AAAAAA</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+
+
+export const Colors = {
+light: {
+mainColor: "#135853",
+text: '#000000', // النصوص الرئيسية
+subText: '#3E3E3E', // النصوص الثانوية
+background: '#FFFFFF', // الخلفية الرئيسية
+card: '#FBFFFF', // خلفيات الكمبوننت الخافته
+button: '#135853', // خلفية الأزرار
+primary: '#0F9386', // عناوين أو نصوص رئيسية
+alert: '#FFAE13', // لون التنبيهات
+placeholder: '#999999', // البليس هولدر
+badge: '#FFEB5A', // خلفية عدد الرسائل
+onboardingBg: '#A2F7F1', // خلفيات onboarding
+
+icon: '#5E5F60', // أيقونات التاب غير النشطة
+},
+dark: {
+mainColor: "#0b7f6d", // نسخة أفتح من اللون الرئيسي لتناسب الخلفية الداكنة
+text: '#FFFFFF', // النصوص الرئيسية (أبيض)
+subText: '#CCCCCC', // النصوص الثانوية
+background: '#121212', // خلفية التطبيق الداكنة الأساسية
+card: '#1E1E1E', // خلفيات الكمبوننت الخافته في الوضع الليلي
+button: '#0b7f6d', // خلفية الأزرار (نفس mainColor)
+primary: '#10B2A2', // درجة فاتحة من primary للوضوح على الداكن
+alert: '#FFC74F', // لون التنبيهات مناسب مع الدارك
+placeholder: '#AAAAAA', // البليس هولدر (رمادي فاتح)
+badge: '#FFF176', // خلفية عدد الرسائل (مفتحة)
+onboardingBg: '#4CD9D0', // خلفيات onboarding بتدرج أهدأ يتماشى مع الدارك
+
+icon: '#AAAAAA', // أيقونات التاب غير النشطة (رمادي فاتح)
+},
+};
