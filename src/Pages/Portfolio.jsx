@@ -140,15 +140,9 @@ export default function FullWidthTabs() {
         ...project,
         TechStack: project.TechStack || [],
       }));
-
       const certificateData = data.certificates;
-
       setProjects(projectData);
       setCertificates(certificateData);
-
-      // Optional: تخزين محلي
-      localStorage.setItem("projects", JSON.stringify(projectData));
-      localStorage.setItem("certificates", JSON.stringify(certificateData));
     } catch (error) {
       console.error("Error loading data from JSON:", error);
     }

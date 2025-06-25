@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import "./index.css";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
@@ -36,7 +36,7 @@ const LandingPage = ({ showWelcome, setShowWelcome }) => {
                 <a href="https://flowbite.com/" className="hover:underline">
                   Al-homaidi
                 </a>
-                 . All Rights Reserved.
+                . All Rights Reserved.
               </span>
             </center>
           </footer>
@@ -57,7 +57,7 @@ const ProjectPageLayout = () => (
           <a href="https://flowbite.com/" className="hover:underline">
             Al-homaidi
           </a>
-           . All Rights Reserved.
+          . All Rights Reserved.
         </span>
       </center>
     </footer>
@@ -66,6 +66,7 @@ const ProjectPageLayout = () => (
 
 function App() {
   const [showWelcome, setShowWelcome] = useState(true);
+
 
   return (
     <BrowserRouter>

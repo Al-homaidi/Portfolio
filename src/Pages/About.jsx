@@ -1,7 +1,8 @@
-import React, { useEffect, memo, useMemo } from "react"
+import React, { useEffect, memo, useMemo, useState } from "react"
 import { FileText, Code, Award, Globe, ArrowUpRight, Sparkles, UserCheck } from "lucide-react"
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import data from "../data.json"
 
 // Memoized Components
 const Header = memo(() => (
@@ -116,11 +117,16 @@ const StatCard = memo(({ icon: Icon, color, value, label, description, animation
 ));
 
 const AboutPage = () => {
-  // Memoized calculations
-  const { totalProjects, totalCertificates, YearExperience, MonthsExperience } = useMemo(() => {
-    const storedProjects = JSON.parse(localStorage.getItem("projects") || "[]");
-    const storedCertificates = JSON.parse(localStorage.getItem("certificates") || "[]");
+  // استخدم state للعدادات
+  const [totalProjects, setTotalProjects] = useState(0);
+  const [totalCertificates, setTotalCertificates] = useState(0);
+  const [YearExperience, setYearExperience] = useState(0);
+  const [MonthsExperience, setMonthsExperience] = useState(0);
 
+  useEffect(() => {
+    // احسب القيم من data.json
+    setTotalProjects(data.projects.length);
+    setTotalCertificates(data.certificates.length);
 
     const startDate = new Date("2022-06-12");
     const today = new Date();
@@ -128,24 +134,16 @@ const AboutPage = () => {
       (today < new Date(today.getFullYear(), startDate.getMonth(), startDate.getDate()) ? 1 : 0);
 
     let years = today.getFullYear() - startDate.getFullYear();
-
     let months = today.getMonth() - startDate.getMonth();
-
     if (months < 0) {
       years--;
       months += 12;
     }
-
     if (today.getDate() < startDate.getDate()) {
       months--;
     }
-
-    return {
-      totalProjects: storedProjects.length,
-      totalCertificates: storedCertificates.length,
-      YearExperience: experience,
-      MonthsExperience: months
-    };
+    setYearExperience(experience);
+    setMonthsExperience(months);
   }, []);
 
   // Optimized AOS initialization
