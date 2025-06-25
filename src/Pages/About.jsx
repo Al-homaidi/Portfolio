@@ -122,7 +122,7 @@ const AboutPage = () => {
     const storedCertificates = JSON.parse(localStorage.getItem("certificates") || "[]");
 
 
-    const startDate = new Date("2022-05-12");
+    const startDate = new Date("2022-06-12");
     const today = new Date();
     const experience = today.getFullYear() - startDate.getFullYear() -
       (today < new Date(today.getFullYear(), startDate.getMonth(), startDate.getDate()) ? 1 : 0);
@@ -237,7 +237,7 @@ const AboutPage = () => {
 
             <div className="flex flex-col lg:flex-row items-center lg:items-start gap-4 lg:gap-4 lg:px-0 w-full">
               <a
-                href="/Mohammed-Mahfouz-Al-homaidi-FlowCV-Resume-20250407.pdf"
+                href="/Mohammed-Mahfouz-Al-homaidi-CV.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full lg:w-auto"
