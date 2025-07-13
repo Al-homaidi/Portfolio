@@ -1,0 +1,369 @@
+{
+  "projects": [
+    {
+      "id": "1",
+      "Title": "QuickCart",
+      "Description": "QuickCart – A Full-Stack E-commerce Platform with Advanced Shopping Cart, Order Management, and Seller Dashboard",
+      "Img": "/project-img/quickcart.png",
+      "Link": "https://quick-cart-tau-umber.vercel.app/",
+      "TechStack": [
+        "nextjs",
+        "react",
+        "mongodb",
+        "mongoose",
+        "tailwind",
+        "javascript",
+        "clerk",
+        "cloudinary",
+        "inngest",
+        "axios"
+      ],
+      "Features": [
+        "Complete e-commerce platform with buyer and seller roles",
+        "Advanced shopping cart with real-time quantity management",
+        "Secure authentication using Clerk with role-based access control",
+        "Product management system for sellers with image upload via Cloudinary",
+        "Order tracking and management with status updates",
+        "Address management system for multiple shipping addresses",
+        "Responsive design optimized for mobile, tablet, and desktop",
+        "Background job processing using Inngest for order management",
+        "Real-time cart synchronization across sessions",
+        "Tax calculation and shipping fee management",
+        "Product search and filtering capabilities",
+        "Order history and tracking for customers"
+      ],
+      "Github_Allowed": "true"
+    },
+    {
+      "id": "2",
+      "Title": "Next.js Portfolio Website",
+      "Description": "A modern, responsive portfolio website built with Next.js 14, featuring dark/light theme toggle, contact form, and beautiful UI design with authentication system",
+      "Img": "/project-img/nextjs-portfolio.png",
+      "Link": "https://coder-fawn-kappa.vercel.app/",
+      "TechStack": [
+        "nextjs",
+        "react",
+        "javascript",
+        "css",
+        "mongodb",
+        "next-auth",
+        "bcryptjs",
+        "swr",
+        "react-icons"
+      ],
+      "Features": [
+        "Modern responsive design with dark/light theme toggle",
+        "Authentication system with NextAuth.js",
+        "Contact form with form validation",
+        "Portfolio showcase with project filtering",
+        "Blog section with article management",
+        "MongoDB integration for data persistence",
+        "SEO optimized with Next.js built-in features",
+        "Mobile-first responsive design",
+        "Image optimization with Next.js Image component",
+        "Context API for theme management"
+      ],
+      "Github_Allowed": "true",
+      "Github": "https://github.com/Al-homaidi/QuickCart"
+    },
+    {
+      "id": "3",
+      "Title": "Movie App",
+      "Description": "A comprehensive mobile movie application built with React Native and Expo. Features an advanced search system with popularity tracking, real-time movie data fetching, and a modern UI designed with Tailwind CSS. The app includes trending movies, detailed movie information, and user engagement tracking through Appwrite backend services.",
+      "Img": "/project-img/movie_app1.png",
+      "Link": "https://github.com/Al-homaidi/movie_app",
+      "TechStack": [
+        "React Native",
+        "Expo",
+        "TypeScript",
+        "Tailwind CSS (NativeWind)",
+        "Appwrite"
+      ],
+      "Features": [
+        "Real-time movie data fetching from TMDB API",
+        "Advanced search functionality with popularity tracking",
+        "Trending movies section with engagement metrics",
+        "Detailed movie information and ratings",
+        "Modern UI with smooth animations and transitions",
+        "Responsive design for mobile and web platforms",
+        "User engagement tracking and analytics",
+        "Cross-platform compatibility (iOS, Android, Web)",
+        "TypeScript for type safety and better development experience",
+        "Tailwind CSS for consistent styling and rapid development",
+        "Appwrite backend integration for data persistence",
+        "Professional code architecture with reusable components"
+      ],
+      "Github_Allowed": "true",
+      "Github": "https://github.com/Al-homaidi/movie_app",
+      "photos_t": "true",
+      "hooks": [
+        "/project-img/movie_app1.png",
+        "/project-img/movie_app2.png",
+        "/project-img/movie_app3.png",
+        "/project-img/movie_app4.png",
+        "/project-img/movie_app5.png",
+        "/project-img/movie_app6.png",
+        "/project-img/movie_app7.png"
+      ]
+    },
+    {
+      "id": "4",
+      "Title": "Recipe App",
+      "Description": "A comprehensive mobile recipe application built with React Native and Expo. Features real-time recipe search, category filtering, favorites management, and detailed recipe information. The app integrates with TheMealDB API for extensive recipe data, includes user authentication with Clerk, and features a modern UI with smooth animations. The backend is built with Node.js, Express, and Drizzle ORM with Neon database for user favorites persistence.",
+      "Img": "/project-img/recipe-app/4.png",
+      "Link": "https://github.com/Al-homaidi/Recipe-App",
+      "TechStack": [
+        "React Native",
+        "Expo",
+        "TypeScript",
+        "Node.js",
+        "Express.js",
+        "Drizzle ORM",
+        "Neon Database",
+        "Clerk Authentication",
+        "TheMealDB API"
+      ],
+      "Features": [
+        "Real-time recipe search with debounced input",
+        "Advanced search by recipe name and ingredients",
+        "Category-based recipe filtering and browsing",
+        "Featured recipe section with random selection",
+        "User authentication and profile management",
+        "Favorites system with persistent storage",
+        "Detailed recipe pages with ingredients and instructions",
+        "Modern UI with smooth animations and transitions",
+        "Pull-to-refresh functionality for updated content",
+        "Responsive design optimized for mobile devices",
+        "Cross-platform compatibility (iOS, Android)",
+        "Backend API with RESTful endpoints",
+        "Database integration for user favorites",
+        "Professional code architecture with reusable components",
+        "Error handling and loading states throughout the app"
+      ],
+      "Github_Allowed": "true",
+      "Github": "https://github.com/Al-homaidi/Recipe-App",
+      "photos_t": "true",
+      "hooks": [
+        "/project-img/recipe-app/1.png",
+        "/project-img/recipe-app/2.png",
+        "/project-img/recipe-app/3.png",
+        "/project-img/recipe-app/4.png",
+        "/project-img/recipe-app/5.png",
+        "/project-img/recipe-app/6.png",
+        "/project-img/recipe-app/7.png",
+        "/project-img/recipe-app/8.png",
+        "/project-img/recipe-app/9.png",
+        "/project-img/recipe-app/10.png",
+        "/project-img/recipe-app/11.png",
+        "/project-img/recipe-app/12.png",
+        "/project-img/recipe-app/13.png",
+        "/project-img/recipe-app/14.png",
+        "/project-img/recipe-app/15.png",
+        "/project-img/recipe-app/16.png",
+        "/project-img/recipe-app/17.png",
+        "/project-img/recipe-app/18.png"
+      ]
+    },
+    {
+      "id": "5",
+      "Title": "Manahel App",
+      "Description": "A mobile app designed to simplify charitable giving in Makkah. Users can easily request and donate services like water, Qurans, and meals directly from their smartphones.",
+      "Img": "/project-img/manahelapp.png",
+      "Link": "https://linktr.ee/manahel.app",
+      "TechStack": [
+        "Ionic Angular",
+        "HTML",
+        "SCSS",
+        "TypeScript"
+      ],
+      "Features": [
+        "Easy in-app ordering of charitable services",
+        "Real-time execution tracking with media proof (images & videos)",
+        "Smooth and intuitive user experience",
+        "Fully responsive and mobile-optimized design",
+        "In-app dashboard for managing donations and requests",
+        "Option to customize services for specific occasions or recipients",
+        "Automatic recurring donation support"
+      ],
+      "Github_Allowed": "false",
+      "photos_t": "true",
+      "hooks": [
+        "/project-img/manahelapp.png",
+        "/project-img/manahelapp1.png",
+        "/project-img/manahelapp2.png",
+        "/project-img/manahelapp3.png",
+        "/project-img/manahelapp4.png",
+        "/project-img/manahelapp5.png",
+        "/project-img/manahelapp6.png"
+      ]
+    },
+    {
+      "id": "6",
+      "Title": "Manahel Web",
+      "Description": "A charitable web platform that empowers users to contribute to various acts of kindness in Makkah, such as water distribution, Quran donations, and meal services for pilgrims and visitors.",
+      "Img": "/project-img/manahel.png",
+      "Link": "https://manahel.net/",
+      "TechStack": [
+        "CodeIgniter",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "jQuery",
+        "Bootstrap"
+      ],
+      "Features": [
+        "Online ordering of charitable services (water, meals, Qurans)",
+        "Execution tracking with photo and video documentation",
+        "Secure and user-friendly donation process",
+        "Fully responsive design across all devices",
+        "Admin dashboard to manage orders and donations",
+        "Customizable services based on occasions or recipients",
+        "Support for recurring donations"
+      ],
+      "Github_Allowed": "false"
+    },
+    {
+      "id": "7",
+      "Title": "Bjda",
+      "Description": "BJDA – A Specialized Platform for Booking Wedding Venues and Sending Invitations",
+      "Img": "/project-img/bjda.png",
+      "Link": "https://www.bjda.com/",
+      "TechStack": [
+        "laravel",
+        "html",
+        "css",
+        "javascript",
+        "tailwind",
+        "jquery"
+      ],
+      "Features": [
+        "Online reservation for wedding halls and event venues",
+        "Search and filter by city, date, and hall type",
+        "Custom invitation design and QR code generation",
+        "Mobile-friendly interface for easy access on all devices",
+        "Integration with WhatsApp for sending invitations",
+        "Multilingual support (Arabic-focused UI)"
+      ],
+      "Github_Allowed": "false"
+    },
+    {
+      "id": "8",
+      "Title": "Chate App",
+      "Description": "A simple mobile chat application built using React Native and Expo. It supports user authentication and real-time messaging via Firebase, offering a clean and intuitive chat experience. This project marked the beginning of my mobile development journey.",
+      "Img": "/project-img/chateapp.png",
+      "Link": "https://github.com/Al-homaidi/chate-app",
+      "TechStack": [
+        "React Native",
+        "Expo",
+        "Tailwind (NativeWind)",
+        "Firebase"
+      ],
+      "Features": [
+        "User authentication via Firebase Authentication",
+        "Real-time messaging using Firebase Firestore",
+        "List of registered users with chat access",
+        "Clean and minimal chat interface",
+        "Built with Expo Router and react-hook-form",
+        "Responsive styling using NativeWind"
+      ],
+      "Github_Allowed": "true",
+      "Github": "https://github.com/Al-homaidi/chate-app",
+      "photos_t": "true",
+      "hooks": [
+        "/project-img/chateapp.png",
+        "/project-img/chateapp1.png",
+        "/project-img/chateapp2.png",
+        "/project-img/chateapp3.png",
+        "/project-img/chateapp4.png",
+        "/project-img/chateapp5.png",
+        "/project-img/chateapp6.png"
+      ]
+    },
+    {
+      "id": "9",
+      "Title": "Store App",
+      "Description": "A fully-featured mobile store application built using React Native and Expo. Designed with a smooth, visually appealing interface and robust functionality, the app supports multiple languages, currencies, themes, and a complete e-commerce experience across mobile and web platforms.",
+      "Img": "/project-img/storeapp.png",
+      "Link": "https://github.com/Al-homaidi/chate-app",
+      "TechStack": [
+        "React Native",
+        "Expo",
+        "Tailwind (NativeWind)",
+        "Firebase"
+      ],
+      "Features": [
+        "Attractive and fluid UI with smooth transitions",
+        "Multilingual support: Arabic (RTL), English, and Turkish",
+        "Dynamic theme system: Light, Dark, or System-based",
+        "Multi-currency support: USD, EUR, GBP, TRY, SAR with automatic price conversion",
+        "Full authentication system: login, signup, and user data storage",
+        "Integrated shopping cart: add/remove items, adjust quantities, calculate total",
+        "Order system: view past orders, track status, and view full details",
+        "Personal profile page: edit settings, change language/currency/theme, share app",
+        "Welcome screen shown only on first launch",
+        "Responsive design compatible with both mobile and web",
+        "Built professionally using best practices in React Native and Expo"
+      ],
+      "Github_Allowed": "true",
+      "Github": "https://github.com/Al-homaidi/Store-App",
+      "photos_t": "true",
+      "hooks": [
+        "/project-img/storeapp.png",
+        "/project-img/storeapp1.png",
+        "/project-img/storeapp2.png",
+        "/project-img/storeapp3.png",
+        "/project-img/storeapp4.png",
+        "/project-img/storeapp5.png",
+        "/project-img/storeapp6.png",
+        "/project-img/storeapp7.png",
+        "/project-img/storeapp8.png"
+      ]
+    },
+    {
+      "id": "10",
+      "Title": "Fall-algharbiya",
+      "Description": "A multi-service platform offering integrated solutions in IT, safety systems, e-services, real estate, general contracting, and commercial brokerage.",
+      "Img": "/project-img/fall-algharbiya.png",
+      "Link": "https://fall-algharbiya.vercel.app/",
+      "TechStack": [
+        "html",
+        "css",
+        "javascript",
+        "Angular",
+        "tailwind"
+      ],
+      "Features": [
+        "Integrated service modules for six business sectors",
+        "AI-powered technology solutions and mobile app integration",
+        "Custom web development with modern UI/UX design",
+        "E-service automation including digital transformation and government platform integration",
+        "Real estate tools for investment, marketing, and electronic contracts",
+        "Safety systems support including calibration, maintenance, and installations",
+        "Dynamic section-based navigation using Angular Router"
+      ],
+      "Github_Allowed": "false"
+    }
+  ],
+  "certificates": [
+    {
+      "Img": "/certificate-img/Coursera-IVCGM190AOSW.png",
+      "Link": "https://www.coursera.org/account/accomplishments/verify/IVCGM190AOSW"
+    },
+    {
+      "Img": "/certificate-img/Coursera-IW4SS7J3X1UI.png",
+      "Link": "https://www.coursera.org/account/accomplishments/verify/IW4SS7J3X1UI"
+    },
+    {
+      "Img": "/certificate-img/Coursera-L7NMAVO1QT0Y.png",
+      "Link": "https://www.coursera.org/account/accomplishments/verify/L7NMAVO1QT0Y"
+    },
+    {
+      "Img": "/certificate-img/Coursera-NHUQVGQYA370.png",
+      "Link": "https://www.coursera.org/account/accomplishments/verify/NHUQVGQYA370"
+    },
+    {
+      "Img": "/certificate-img/Coursera-ONLTERDLPZXF.jpg",
+      "Link": "https://www.coursera.org/account/accomplishments/verify/ONLTERDLPZXF"
+    }
+  ]
+}
