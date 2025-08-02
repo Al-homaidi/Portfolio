@@ -129,7 +129,7 @@ const AboutPage = () => {
     setTotalProjects(data.projects.length);
     setTotalCertificates(data.certificates.length);
 
-    const startDate = new Date("2022-06-12");
+    const startDate = new Date("2023-07-1");
     const today = new Date();
     const experience = today.getFullYear() - startDate.getFullYear() -
       (today < new Date(today.getFullYear(), startDate.getMonth(), startDate.getDate()) ? 1 : 0);
