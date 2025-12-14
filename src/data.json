@@ -68,6 +68,44 @@
     },
     {
       "id": "3",
+      "Title": "Offline-First Notes App",
+      "Description": "A mobile notes application built with Expo React Native following an Offline-First approach. Notes are stored locally for instant access and synced with Firebase when internet connectivity is available.",
+      "Img": "/project-img/notes-app/notes-app3.png",
+      "Link": "https://github.com/Al-homaidi/Notes-App",
+      "TechStack": [
+        "expo",
+        "react-native",
+        "typescript",
+        "firebase",
+        "firestore",
+        "async-storage",
+        "netinfo",
+        "expo-router"
+      ],
+      "Features": [
+        "Offline-First architecture for seamless note creation without internet",
+        "Local data persistence for instant access to notes",
+        "Automatic background sync with Firebase when online",
+        "Create, edit, and delete notes with real-time UI updates",
+        "Conflict-safe sync strategy based on last update timestamp",
+        "Clean and minimal mobile-friendly UI",
+        "Optimized performance for low connectivity scenarios",
+        "Scalable structure ready for authentication and cloud sync"
+      ],
+      "Github_Allowed": "true",
+      "Github": "https://github.com/Al-homaidi/Notes-App",
+      "photos_t": "true",
+      "hooks": [
+        "/project-img/notes-app/notes-app1.png",
+        "/project-img/notes-app/notes-app2.png",
+        "/project-img/notes-app/notes-app3.png",
+        "/project-img/notes-app/notes-app4.png",
+        "/project-img/notes-app/notes-app5.png",
+        "/project-img/notes-app/notes-app6.png"
+      ]
+    },
+    {
+      "id": "4",
       "Title": "Movie App",
       "Description": "A comprehensive mobile movie application built with React Native and Expo. Features an advanced search system with popularity tracking, real-time movie data fetching, and a modern UI designed with Tailwind CSS. The app includes trending movies, detailed movie information, and user engagement tracking through Appwrite backend services.",
       "Img": "/project-img/movie-app/movie_app1.png",
@@ -107,7 +145,7 @@
       ]
     },
     {
-      "id": "4",
+      "id": "5",
       "Title": "Recipe App",
       "Description": "A comprehensive mobile recipe application built with React Native and Expo. Features real-time recipe search, category filtering, favorites management, and detailed recipe information. The app integrates with TheMealDB API for extensive recipe data, includes user authentication with Clerk, and features a modern UI with smooth animations. The backend is built with Node.js, Express, and Drizzle ORM with Neon database for user favorites persistence.",
       "Img": "/project-img/recipe-app/4.png",
@@ -165,15 +203,14 @@
       ]
     },
     {
-      "id": "5",
+      "id": "6",
       "Title": "Manahel App",
       "Description": "A mobile app designed to simplify charitable giving in Makkah. Users can easily request and donate services like water, Qurans, and meals directly from their smartphones.",
       "Img": "/project-img/manahel_app/manahelapp.png",
       "Link": "https://linktr.ee/manahel.app",
       "TechStack": [
-        "Ionic Angular",
-        "HTML",
-        "SCSS",
+        "React Native",
+        "Nativewind",
         "TypeScript"
       ],
       "Features": [
@@ -193,23 +230,29 @@
         "/project-img/manahel_app/manahelapp2.png",
         "/project-img/manahel_app/manahelapp3.png",
         "/project-img/manahel_app/manahelapp4.png",
-        "/project-img/manahel_app/manahelapp5.png",
-        "/project-img/manahel_app/manahelapp6.png"
+        "/project-img/manahel_app/manahelapp6.png",
+        "/project-img/manahel_app/manahelapp7.png",
+        "/project-img/manahel_app/manahelapp8.png",
+        "/project-img/manahel_app/manahelapp9.png",
+        "/project-img/manahel_app/manahelapp10.png",
+        "/project-img/manahel_app/manahelapp11.png",
+        "/project-img/manahel_app/manahelapp12.png",
+        "/project-img/manahel_app/manahelapp13.png",
+        "/project-img/manahel_app/manahelapp14.png",
+        "/project-img/manahel_app/manahelapp15.png",
+        "/project-img/manahel_app/manahelapp16.png"
       ]
     },
     {
-      "id": "6",
+      "id": "7",
       "Title": "Manahel Web",
       "Description": "A charitable web platform that empowers users to contribute to various acts of kindness in Makkah, such as water distribution, Quran donations, and meal services for pilgrims and visitors.",
       "Img": "/project-img/manahel.png",
-      "Link": "https://manahel.net/",
+      "Link": "https://test.manahel.net",
       "TechStack": [
-        "CodeIgniter",
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "jQuery",
-        "Bootstrap"
+        "laravel",
+        "react",
+        "tailwind"
       ],
       "Features": [
         "Online ordering of charitable services (water, meals, Qurans)",
@@ -223,7 +266,7 @@
       "Github_Allowed": "false"
     },
     {
-      "id": "7",
+      "id": "8",
       "Title": "Bjda",
       "Description": "BJDA – A Specialized Platform for Booking Wedding Venues and Sending Invitations",
       "Img": "/project-img/bjda.png",
@@ -247,7 +290,7 @@
       "Github_Allowed": "false"
     },
     {
-      "id": "8",
+      "id": "9",
       "Title": "Chate App",
       "Description": "A simple mobile chat application built using React Native and Expo. It supports user authentication and real-time messaging via Firebase, offering a clean and intuitive chat experience. This project marked the beginning of my mobile development journey.",
       "Img": "/project-img/chate_app/chateapp.png",
@@ -280,7 +323,7 @@
       ]
     },
     {
-      "id": "9",
+      "id": "10",
       "Title": "Store App",
       "Description": "A fully-featured mobile store application built using React Native and Expo. Designed with a smooth, visually appealing interface and robust functionality, the app supports multiple languages, currencies, themes, and a complete e-commerce experience across mobile and web platforms.",
       "Img": "/project-img/store_app/storeapp.png",
@@ -320,7 +363,7 @@
       ]
     },
     {
-      "id": "10",
+      "id": "11",
       "Title": "Fall-algharbiya",
       "Description": "A multi-service platform offering integrated solutions in IT, safety systems, e-services, real estate, general contracting, and commercial brokerage.",
       "Img": "/project-img/fall-algharbiya.png",
