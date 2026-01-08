@@ -68,6 +68,41 @@
     },
     {
       "id": "3",
+      "Title": "ShadCN Admin Dashboard",
+      "Description": "A modern, high-performance admin dashboard built with Next.js 15 and ShadCN UI. This application features a comprehensive suite of data management tools including interactive data tables for users and payments, dynamic charts for analytics, and a fully responsive layout with dark mode support. It demonstrates best practices in modern React development using Server Components and TypeScript.",
+      "Img": "/project-img/shadcn-dashboard.png",
+      "Link": "https://shadcn-admin-dashboard-5vy4.vercel.app",
+      "TechStack": [
+        "next.js",
+        "react",
+        "typescript",
+        "tailwindcss",
+        "shadcn-ui",
+        "recharts",
+        "tanstack-table",
+        "lucide-react",
+        "react-hook-form",
+        "zod"
+      ],
+      "Features": [
+        "Responsive Sidebar and Navbar layout with Collapsible groups",
+        "Interactive Data Tables with sorting, filtering, and row selection (Tanstack Table)",
+        "Dynamic Charts and Analytics (Line, Bar, Area, Pie) using Recharts",
+        "User Management System with Profile details and generic Data Table",
+        "Payments processing view with status indicators",
+        "Full-featured Calendar component with event tracking",
+        "Functional Inbox interface for message management",
+        "Global Search functionality with recent and suggested results",
+        "Comprehensive Settings page with Account, Notifications, and Appearance tabs",
+        "Dark/Light Theme customization (next-themes)",
+        "Form validation using Zod and React Hook Form",
+        "Server-side rendering and efficient data fetching"
+      ],
+      "Github_Allowed": "true",
+      "Github": "https://github.com/Al-homaidi/shadcn-admin-dashboard"
+    },
+    {
+      "id": "4",
       "Title": "Syncfusion Dashboard",
       "Description": "A modern, feature-rich admin dashboard built with React and Syncfusion components. This dashboard provides a comprehensive interface for managing e-commerce data, visualizing analytics with interactive charts, and handling various business operations including order management, employee tracking, and customer database management.",
       "Img": "/project-img/project-syncfusion-dashboard.png",
@@ -102,7 +137,7 @@
       "Github": "https://github.com/Al-homaidi/project_syncfusion_dashboard"
     },
     {
-      "id": "4",
+      "id": "5",
       "Title": "Offline-First Notes App",
       "Description": "A mobile notes application built with Expo React Native following an Offline-First approach. Notes are stored locally for instant access and synced with Firebase when internet connectivity is available.",
       "Img": "/project-img/notes-app/notes-app3.png",
@@ -140,7 +175,7 @@
       ]
     },
     {
-      "id": "5",
+      "id": "6",
       "Title": "Movie App",
       "Description": "A comprehensive mobile movie application built with React Native and Expo. Features an advanced search system with popularity tracking, real-time movie data fetching, and a modern UI designed with Tailwind CSS. The app includes trending movies, detailed movie information, and user engagement tracking through Appwrite backend services.",
       "Img": "/project-img/movie-app/movie_app1.png",
@@ -180,7 +215,7 @@
       ]
     },
     {
-      "id": "6",
+      "id": "7",
       "Title": "Recipe App",
       "Description": "A comprehensive mobile recipe application built with React Native and Expo. Features real-time recipe search, category filtering, favorites management, and detailed recipe information. The app integrates with TheMealDB API for extensive recipe data, includes user authentication with Clerk, and features a modern UI with smooth animations. The backend is built with Node.js, Express, and Drizzle ORM with Neon database for user favorites persistence.",
       "Img": "/project-img/recipe-app/4.png",
@@ -238,7 +273,7 @@
       ]
     },
     {
-      "id": "7",
+      "id": "8",
       "Title": "Manahel App",
       "Description": "A mobile app designed to simplify charitable giving in Makkah. Users can easily request and donate services like water, Qurans, and meals directly from their smartphones.",
       "Img": "/project-img/manahel_app/manahelapp.png",
@@ -279,7 +314,7 @@
       ]
     },
     {
-      "id": "8",
+      "id": "9",
       "Title": "Manahel Web",
       "Description": "A charitable web platform that empowers users to contribute to various acts of kindness in Makkah, such as water distribution, Quran donations, and meal services for pilgrims and visitors.",
       "Img": "/project-img/manahel.png",
@@ -301,7 +336,7 @@
       "Github_Allowed": "false"
     },
     {
-      "id": "9",
+      "id": "10",
       "Title": "Bjda",
       "Description": "BJDA – A Specialized Platform for Booking Wedding Venues and Sending Invitations",
       "Img": "/project-img/bjda.png",
@@ -325,7 +360,7 @@
       "Github_Allowed": "false"
     },
     {
-      "id": "10",
+      "id": "11",
       "Title": "Chate App",
       "Description": "A simple mobile chat application built using React Native and Expo. It supports user authentication and real-time messaging via Firebase, offering a clean and intuitive chat experience. This project marked the beginning of my mobile development journey.",
       "Img": "/project-img/chate_app/chateapp.png",
@@ -358,7 +393,7 @@
       ]
     },
     {
-      "id": "11",
+      "id": "12",
       "Title": "Store App",
       "Description": "A fully-featured mobile store application built using React Native and Expo. Designed with a smooth, visually appealing interface and robust functionality, the app supports multiple languages, currencies, themes, and a complete e-commerce experience across mobile and web platforms.",
       "Img": "/project-img/store_app/storeapp.png",
@@ -398,7 +433,7 @@
       ]
     },
     {
-      "id": "12",
+      "id": "13",
       "Title": "Fall-algharbiya",
       "Description": "A multi-service platform offering integrated solutions in IT, safety systems, e-services, real estate, general contracting, and commercial brokerage.",
       "Img": "/project-img/fall-algharbiya.png",
