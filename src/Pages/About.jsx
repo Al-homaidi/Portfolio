@@ -118,14 +118,12 @@ const StatCard = memo(({ icon: Icon, color, value, label, description, animation
 
 const AboutPage = () => {
 
-  // استخدم state للعدادات
   const [totalProjects, setTotalProjects] = useState(0);
   const [totalCertificates, setTotalCertificates] = useState(0);
   const [YearExperience, setYearExperience] = useState(0);
   const [MonthsExperience, setMonthsExperience] = useState(0);
 
   useEffect(() => {
-    // احسب القيم من data.json
     setTotalProjects(data.projects.length);
     setTotalCertificates(data.certificates.length);
 

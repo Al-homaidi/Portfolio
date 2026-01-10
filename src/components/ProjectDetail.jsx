@@ -4,6 +4,7 @@ import {
   ArrowLeft, ExternalLink, Github, Code2, Star,
   ChevronRight, Layers, Layout, Globe, Package, Cpu, Code, Image,
 } from "lucide-react";
+import { Skeleton } from "@mui/material";
 import Swal from 'sweetalert2';
 import SwiperCustom from './SwiperCustom';
 import data from "../data.json";
@@ -234,10 +235,19 @@ const ProjectDetails = () => {
                 )}
                 {project.photos_t !== 'true' && (
                   <>
+                    {!isImageLoaded && (
+                      <Skeleton
+                        variant="rectangular"
+                        width="100%"
+                        height={400}
+                        sx={{ bgcolor: 'grey.900', borderRadius: '1rem' }}
+                        animation="wave"
+                      />
+                    )}
                     <img
                       src={project.Img}
                       alt={project.Title}
-                      className="w-full  object-contain max-h-[400px] transform transition-transform duration-700 will-change-transform group-hover:scale-105"
+                      className={`w-full  object-contain max-h-[400px] transform transition-transform duration-700 will-change-transform group-hover:scale-105 ${!isImageLoaded ? 'hidden' : 'block'}`}
                       onLoad={() => setIsImageLoaded(true)}
                     />
                     <div className="absolute inset-0 border-2 border-white/0 group-hover:border-white/10 transition-colors duration-300 rounded-2xl" />

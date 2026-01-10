@@ -1,5 +1,41 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
+import { Skeleton } from '@mui/material';
+
+const SwiperSlideComponent = ({ url, title, index, openModal }) => {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  return (
+    <div className="w-full flex-shrink-0 aspect-video">
+      <div
+        onClick={() => openModal(index)}
+        className="relative w-full h-full rounded-xl overflow-hidden bg-black/20 cursor-zoom-in"
+      >
+        {!isLoaded && (
+          <Skeleton
+            variant="rectangular"
+            width="100%"
+            height="100%"
+            sx={{ bgcolor: 'grey.900' }}
+            animation="wave"
+          />
+        )}
+        <img
+          src={url}
+          alt={`${title} - Image ${index + 1}`}
+          className={`w-full h-full object-contain ${!isLoaded ? 'hidden' : 'block'}`}
+          onLoad={() => setIsLoaded(true)}
+        />
+        <div className="absolute inset-0 flex flex-col items-center justify-center z-20 w-full h-full bg-black/0 md:bg-black/0 md:group-hover:bg-black/40 transition-all duration-300 opacity-100 md:opacity-0 md:group-hover:opacity-100">
+          <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8 mb-2 text-white drop-shadow-lg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M4 8V6a2 2 0 0 1 2-2h2m8 0h2a2 2 0 0 1 2 2v2m0 8v2a2 2 0 0 1-2 2h-2m-8 0H6a2 2 0 0 1-2-2v-2" />
+          </svg>
+          <span className="text-white text-lg font-semibold drop-shadow-lg">View photo</span>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const SwiperCustom = ({ images, title }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -105,24 +141,13 @@ const SwiperCustom = ({ images, title }) => {
           onTouchEnd={handleTouchEnd}
         >
           {images.map((url, index) => (
-            <div key={index} className="w-full flex-shrink-0 aspect-video">
-              <div
-                onClick={() => openModal(index)}
-                className="relative w-full h-full rounded-xl overflow-hidden bg-black/20 cursor-zoom-in"
-              >
-                <img
-                  src={url}
-                  alt={`${title} - Image ${index + 1}`}
-                  className="w-full h-full object-contain"
-                />
-                <div className="absolute inset-0 flex flex-col items-center justify-center z-20 w-full h-full bg-black/0 md:bg-black/0 md:group-hover:bg-black/40 transition-all duration-300 opacity-100 md:opacity-0 md:group-hover:opacity-100">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8 mb-2 text-white drop-shadow-lg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M4 8V6a2 2 0 0 1 2-2h2m8 0h2a2 2 0 0 1 2 2v2m0 8v2a2 2 0 0 1-2 2h-2m-8 0H6a2 2 0 0 1-2-2v-2" />
-                  </svg>
-                  <span className="text-white text-lg font-semibold drop-shadow-lg">View photo</span>
-                </div>
-              </div>
-            </div>
+            <SwiperSlideComponent
+              key={index}
+              url={url}
+              title={title}
+              index={index}
+              openModal={openModal}
+            />
           ))}
         </div>
 

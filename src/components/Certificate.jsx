@@ -1,10 +1,11 @@
 import React, { useState } from "react"
-import { Modal, IconButton, Box, Fade, Backdrop, Zoom, Typography } from "@mui/material"
+import { Modal, IconButton, Box, Fade, Backdrop, Zoom, Typography, Skeleton } from "@mui/material"
 import CloseIcon from "@mui/icons-material/Close"
 import FullscreenIcon from "@mui/icons-material/Fullscreen"
 
 const Certificate = ({ ImgSertif, ImgLink }) => {
 	const [open, setOpen] = useState(false)
+	const [isLoaded, setIsLoaded] = useState(false);
 
 	const handleOpen = () => {
 		setOpen(true)
@@ -55,6 +56,15 @@ const Certificate = ({ ImgSertif, ImgLink }) => {
 							zIndex: 1,
 						},
 					}}>
+					{!isLoaded && (
+						<Skeleton
+							variant="rectangular"
+							width="100%"
+							height={200} // Adjust height as approximately 
+							sx={{ bgcolor: 'grey.900' }}
+							animation="wave"
+						/>
+					)}
 					<img
 						className="certificate-image"
 						src={ImgSertif}
@@ -62,12 +72,13 @@ const Certificate = ({ ImgSertif, ImgLink }) => {
 						style={{
 							width: "100%",
 							height: "auto",
-							display: "block",
+							display: isLoaded ? "block" : "none",
 							objectFit: "cover",
 							filter: "contrast(1.10) brightness(0.9) saturate(1.1)",
 							transition: "filter 0.3s ease",
 						}}
 						onClick={handleOpen}
+						onLoad={() => setIsLoaded(true)}
 					/>
 				</Box>
 
