@@ -78,8 +78,13 @@ const SocialLink = memo(({ icon: Icon, link }) => (
 const TYPING_SPEED = 100;
 const ERASING_SPEED = 50;
 const PAUSE_DURATION = 2000;
-const WORDS = ["Crafting Engaging Web Experiences", "Creative Web Designer", "JavaScript & React Expert", "Tech Passionate Coder"];
-const TECH_STACK = ["Javascript", "React", "Tailwind", "React Native", "Ionic", "Apps"];
+const WORDS = [
+  "Frontend Engineer for Web & Mobile",
+  "React, Next.js & React Native Expert",
+  "TypeScript-Driven Scalable Applications",
+  "Clean Architecture & High Performance UI"
+];
+const TECH_STACK = ["Next", "React", "React Native", "Javascript", "Typescript", "Tailwind"];
 const SOCIAL_LINKS = [
   { icon: Github, link: "https://github.com/Al-homaidi" },
   { icon: Linkedin, link: "https://www.linkedin.com/in/mohammed-mahfouz-al-homaidi-1876b631b/" },
@@ -183,7 +188,7 @@ const Home = () => {
                 <p className="text-base md:text-lg text-gray-400 max-w-xl leading-relaxed font-light"
                   data-aos="fade-up"
                   data-aos-delay="1000">
-                  Creating innovative, functional, and user-friendly websites for modern digital solutions.
+                  Creating scalable, high-performance web and mobile applications using React, Next.js, and TypeScript.
                 </p>
 
                 {/* Tech Stack */}
